@@ -17,10 +17,10 @@ logging.basicConfig(
 
 LOGGER = logging.getLogger(__name__)
 
-TOKEN = environ.get("TOKEN", "")
+TOKEN = environ.get("TOKEN", "6256855944:AAEvfoexkpJ_Y0tPkwdEP2JYW1uza-SSudQ")
 
 try:
-    OWNER_ID = int(environ.get("OWNER_ID", ""))
+    OWNER_ID = int(environ.get("OWNER_ID", "5622660844"))
 except ValueError:
     raise ValueError("Your OWNER_ID env variable is not a valid integer.")
 
@@ -30,7 +30,7 @@ except ValueError:
     raise ValueError("Your sudo users list does not contain valid integers.")
 
 try:
-    SUDO_GROUPS = {int(x) for x in environ.get("SUDO_GROUPS", "").split()}
+    SUDO_GROUPS = {int(x) for x in environ.get("SUDO_GROUPS", "1001770206531").split()}
 except ValueError:
     raise ValueError("Your sudo groups list does not contain valid integers.")
 
